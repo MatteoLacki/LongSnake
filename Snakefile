@@ -26,3 +26,19 @@ rule do_something_with_results:
         "out/final/{config0}_{config1}.toml"
     shell:
         "cat {input} > {output}"
+
+
+rule turn_toml_into_json:
+    input:
+        "{path}.toml"
+    output:
+        "{path}.json"
+    run:
+        import tomllib
+        import json
+        from pprint import pprint
+
+        with open(input, "rb") as _in, open(output, "w") as _out:
+            config = tomllib.load(_in)
+            pprint(config)
+            json.dump(config, _out)
