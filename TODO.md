@@ -10,3 +10,5 @@
 * How to deal with potentially many simultaneous queries?
     * sqlite3 setting
 
+Help:
+https://editor.ponyorm.com/user/MatteoLacki/snakemake/sqlite
