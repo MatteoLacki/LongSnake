@@ -1,0 +1,24 @@
+[wildcards]
+# this section stays
+step_0_wildcard = "default"
+
+[step_0]
+description = "Config for step 0."
+final_folder = "configs/step_0"
+forward_wildcard = "step_0_config"
+format="toml"
+[step_0.config]
+important_part_of_config_0 = "a"
+important_part_of_config_1 = "b"
+
+
+
+[step_1]
+description = "Config for step 1."
+final_folder = "configs/step_1"
+forward_wildcard = "step_1_config"
+format="toml"
+[step_0.config]
+very_important_part_of_config_0 = "A"
+very_important_part_of_config_1 = "B"
+very_important_part_of_config_2 = "D"
