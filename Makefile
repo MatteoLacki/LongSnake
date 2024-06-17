@@ -3,4 +3,5 @@ ve: clean
 	ve/bin/pip install -e long_snake
 	ln -s ve/bin/activate activate
 clean:
-	rm -rf ve
+	rm -rf ve activate
+

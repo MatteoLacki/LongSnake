@@ -1,0 +1,31 @@
+[wildcards]
+# this section stays
+
+
+
+
+step_0_wildcard = "default"
+step_1_wildcard = "adaba"
+
+[step_1]
+final_folder = "partial_configs/step_1"
+description = "Config for step 1."
+format="toml"
+forward_wildcard = "step_1_config"
+[step_1.config]
+very_important_part_of_config_2 = "C"
+very_important_part_of_config_0 = "A"
+
+very_important_part_of_config_1 =     "B"
+
+
+[step_0]
+description = "Config for step 0."
+final_folder = "partial_configs/step_0"
+forward_wildcard = "step_0_config"
+format="toml"
+[step_0.config]
+important_part_of_config_0 = "a"
+important_part_of_config_1 = "b"
+
+

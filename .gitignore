@@ -1,2 +1,5 @@
 *.egg-info
 activate
+partial_configs/*
+database.sqlite
+__pycache__

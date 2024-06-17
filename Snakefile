@@ -42,3 +42,26 @@ rule turn_toml_into_json:
             config = tomllib.load(_in)
             pprint(config)
             json.dump(config, _out)
+
+
+def parser(wildcards):
+    ...
+    return {'a': 121}
+
+rule make_fourth:
+    output:
+        "P/fourth/{something}"
+    input:
+        unpack(parser)
+    run:
+        pass
+
+
+rule complicated_rule:
+    input:
+        "P/first/{very_long_input_1}",
+        "P/second/{very_long_input_2}",
+        "P/third/{very_long_input_3}",
+        "P/fourth/{very_long_input_4}",
+    output:
+        "P/complicated_rule/{output}"
