@@ -10,7 +10,7 @@ def load_config(filepath: str):
 
 def create_partial_configs():
 
-    consolidated_config = load_config("dev/consolidated_config.toml")
+    consolidated_config = load_config("dev/consolidated_config_new.toml")
 
     for config, value in consolidated_config.items():
         if config == "wildcards":

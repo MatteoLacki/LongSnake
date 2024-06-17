@@ -24,6 +24,6 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
     ],
-    install_requires=["snakemake"],
+    install_requires=["snakemake", "toml", "pony"],
     scripts=glob.glob("tools/*.py"),
 )
